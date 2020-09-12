@@ -1,4 +1,7 @@
 public enum BankType {
     VIETCOMBANK,
-    TPBANK;
+    TPBANK,
+    AGRIBANK,
+    BIDVBANK,
+    VIETINBANK;
 }

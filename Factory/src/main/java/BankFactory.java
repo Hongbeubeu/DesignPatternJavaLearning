@@ -8,7 +8,13 @@ public class BankFactory {
             case TPBANK:
                 return new TPBank();
             case VIETCOMBANK:
-                return  new Vietcombank();
+                return  new VietcomBank();
+            case AGRIBANK:
+                return new AgriBank();
+            case BIDVBANK:
+                return new BIDVBank();
+            case VIETINBANK:
+                return new VietinBank();
             default:
                 throw new IllegalArgumentException("This bank type is unsupported");
         }
