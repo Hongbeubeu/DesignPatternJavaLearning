@@ -31,3 +31,23 @@ Lợi ích của Abstract Factory Pattern
 - Giúp tránh được việc sử dụng điều kiện logic bên trong Factory Pattern. Khi một Factory Method lớn (có quá nhiều sử lý if-else hay switch-case), chúng ta nên sử dụng theo mô hình Abstract Factory để dễ quản lý hơn (cách phân chia có thể là gom nhóm các sub-class cùng loại vào một Factory).
 - Abstract Factory Pattern là factory của các factory, có thể dễ dạng mở rộng để chứa thêm các factory và các sub-class khác.
 - Dễ dàng xây dựng một hệ thống đóng gói (encapsulate): sử dụng được với nhiều nhóm đối tượng (factory) và tạo nhiều product khác nhau.
+
+4. Builder
+
+Lợi ích của Builder Pattern
+
+- Hỗ trợ, loại bớt việc phải viết nhiều constructor.
+- Code dễ đọc, dễ bảo trì hơn khi số lượng thuộc tính (propery) bắt buộc để tạo một object từ 4 hoặc 5 propery.
+- Giảm bớt số lượng constructor, không cần truyền giá trị null cho các tham số không sử dụng.
+- Ít bị lỗi do việc gán sai tham số khi mà có nhiều tham số trong constructor: bởi vì người dùng đã biết được chính xác giá trị gì khi gọi phương thức tương ứng.
+- Đối tượng được xây dựng an toàn hơn: bởi vì nó đã được tạo hoàn chỉnh trước khi sử dụng.
+ Cung cấp cho bạn kiểm soát tốt hơn quá trình xây dựng: chúng ta có thể thêm xử lý kiểm tra ràng buộc trước khi đối tượng được trả về người dùng.
+- Có thể tạo đối tượng immutable.
+
+Sử dụng Builder Pattern khi nào?
+
+- Tạo một đối tượng phức tạp: có nhiều thuộc tính (nhiều hơn 4) và một số bắt buộc (requried), một số không bắt buộc (optional).
+- Khi có quá nhiều hàm constructor, bạn nên nghĩ đến Builder.
+- Muốn tách rời quá trình xây dựng một đối tượng phức tạp từ các phần tạo nên đối tượng.
+- Muốn kiểm soát quá trình xây dựng.
+- Khi người dùng (client) mong đợi nhiều cách khác nhau cho đối tượng được xây dựng.
