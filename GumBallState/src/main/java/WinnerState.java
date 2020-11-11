@@ -22,7 +22,6 @@ public class WinnerState implements State {
 
     @Override
     public void dispense() {
-
         gumballMachine.releaseBall();
         if (gumballMachine.getCount() == 0) {
             gumballMachine.setState(gumballMachine.getSoldOutState());
