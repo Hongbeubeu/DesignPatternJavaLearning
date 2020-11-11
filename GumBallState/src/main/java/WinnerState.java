@@ -28,6 +28,7 @@ public class WinnerState implements State {
         } else {
             gumballMachine.releaseBall();
             System.out.println("YOU'RE A WINNER! you get two gumballs for your quarter");
+            gumballMachine.countWin();
             if (gumballMachine.getCount() > 0) {
                 gumballMachine.setState(gumballMachine.getNoQuarterState());
             }else {

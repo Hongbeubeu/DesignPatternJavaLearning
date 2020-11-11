@@ -7,6 +7,7 @@ public class GumballMachine {
 
    State state = soldOutState;
    int count = 0;
+   int winnerCounter = 0;
 
    public GumballMachine(int numberGumballs){
        soldOutState = new SoldOutState(this);
@@ -19,6 +20,9 @@ public class GumballMachine {
            state = noQuarterState;
    }
 
+   public void countWin(){
+        winnerCounter++;
+   }
    public void insertQuarter() {
        state.insertQuarter();
    }
@@ -58,6 +62,7 @@ public class GumballMachine {
        }
        result.append("\n");
        result.append("Machine is " + state + "\n");
+       result.append("\nWin time: " + winnerCounter);
        return result.toString();
    }
 
